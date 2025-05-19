@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador Regresivo - 16 de Octubre 2027</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sección del contador regresivo -->
+    <section id="countdown-section">
+      <h1>Tiempo Restante</h1>
+      <div id="final-message" class="hidden">¡El Tiempo ha Llegado!</div>
+      
+      <div id="countdown-container">
+        <div class="time-unit">
+          <span class="time-label">Años</span>
+          <span id="years" class="time-value">0</span>
+        </div>
+        <div class="time-unit">
+          <span class="time-label">Meses</span>
+          <span id="months" class="time-value">0</span>
+        </div>
+        <div class="time-unit">
+          <span class="time-label">Semanas</span>
+          <span id="weeks" class="time-value">0</span>
+        </div>
+        <div class="time-unit">
+          <span class="time-label">Días</span>
+          <span id="days" class="time-value">0</span>
+        </div>
+        <div class="time-unit">
+          <span class="time-label">Horas</span>
+          <span id="hours" class="time-value">0</span>
+        </div>
+        <div class="time-unit">
+          <span class="time-label">Minutos</span>
+          <span id="minutes" class="time-value">0</span>
+        </div>
+        <div class="time-unit">
+          <span class="time-label">Segundos</span>
+          <span id="seconds" class="time-value">0</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nueva sección para la playlist de YouTube Music -->
+    <section id="playlist-section">
+      <h2>Playlist Musical</h2>
+      <div class="playlist-container">
+        <iframe src="https://www.youtube.com/watch?v=m7uiaakuLpQ&list=PLDbeoZ57LM7uaUlAboUhaAgtGSbR5FQmS" 
+                title="YouTube Music Playlist" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+  </div>
+
+  <!-- Añadido el script de Lovable -->
+  <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+  <script src="script.js"></script>
+</body>
+</html>
