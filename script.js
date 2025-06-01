@@ -14,6 +14,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const countdownContainer = document.getElementById('countdown-container');
   const finalMessage = document.getElementById('final-message');
   
+  // Función para agregar ceros a la izquierda
+  function padNumber(number) {
+    return number.toString().padStart(2, '0');
+  }
+
+  // Función para agregar animación al cambiar números
+  function updateElementWithAnimation(element, newValue) {
+    const paddedValue = padNumber(newValue);
+    if (element.textContent !== paddedValue) {
+      element.style.transform = 'scale(1.1)';
+      element.textContent = paddedValue;
+      setTimeout(() => {
+        element.style.transform = 'scale(1)';
+      }, 100);
+    }
+  }
+  
   function updateCountdown() {
     const currentDate = new Date();
     
@@ -43,15 +60,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const minutes = Math.floor(remainingAfterHours / (1000 * 60));
     const seconds = Math.floor((remainingAfterHours % (1000 * 60)) / 1000);
 
-    yearsElement.textContent = years;
-    monthsElement.textContent = months;
-    weeksElement.textContent = weeks;
-    daysElement.textContent = days;
-    hoursElement.textContent = hours;
-    minutesElement.textContent = minutes;
-    secondsElement.textContent = seconds;
+    // Actualizar elementos con animación
+    updateElementWithAnimation(yearsElement, years);
+    updateElementWithAnimation(monthsElement, months);
+    updateElementWithAnimation(weeksElement, weeks);
+    updateElementWithAnimation(daysElement, days);
+    updateElementWithAnimation(hoursElement, hours);
+    updateElementWithAnimation(minutesElement, minutes);
+    updateElementWithAnimation(secondsElement, seconds);
   }
   
+  // Actualizar cada segundo
   setInterval(updateCountdown, 1000);
   updateCountdown();
+
+  // Corregir el enlace de YouTube Music
+  const playlistContainer = document.querySelector('.playlist-container iframe');
+  if (playlistContainer) {
+    playlistContainer.src = "https://www.youtube.com/embed/videoseries?list=PLDbeoZ57LM7uaUlAboUhaAgtGSbR5FQmS";
+  }
 });
