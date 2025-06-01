@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dedicatorias</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navigation">
+    <a href="index.html" class="nav-link">Inicio</a>
+    <a href="poemas/poema1.html" class="nav-link">Poema 1</a>
+    <a href="poemas/poema2.html" class="nav-link">Poema 2</a>
+    <a href="poemas/poema3.html" class="nav-link">Poema 3</a>
+    <a href="poemas/poema4.html" class="nav-link">Poema 4</a>
+    <a href="dedicatorias.html" class="nav-link active">Dedicatorias</a>
+  </nav>
+
+  <div class="container dedications-container">
+    <h1>Dedicatorias Especiales</h1>
+    
+    <div class="add-dedication">
+      <h2>Agregar Nueva Dedicatoria</h2>
+      <input type="text" id="songTitle" placeholder="Título de la canción" class="dedication-input">
+      <input type="text" id="artist" placeholder="Artista" class="dedication-input">
+      <textarea id="message" placeholder="Tu mensaje..." class="dedication-input"></textarea>
+      <button onclick="addDedication()" class="save-button">Agregar Dedicatoria</button>
+    </div>
+
+    <div id="dedicationsList" class="dedications-list">
+      <!-- Las dedicatorias se agregarán aquí dinámicamente -->
+    </div>
+  </div>
+
+  <script src="dedications.js"></script>
+</body>
+</html>

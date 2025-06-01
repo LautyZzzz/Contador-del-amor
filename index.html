@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,8 +8,16 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <nav class="navigation">
+    <a href="index.html" class="nav-link">Inicio</a>
+    <a href="poemas/poema1.html" class="nav-link">Poema 1</a>
+    <a href="poemas/poema2.html" class="nav-link">Poema 2</a>
+    <a href="poemas/poema3.html" class="nav-link">Poema 3</a>
+    <a href="poemas/poema4.html" class="nav-link">Poema 4</a>
+    <a href="dedicatorias.html" class="nav-link">Dedicatorias</a>
+  </nav>
+
   <div class="container">
-    <!-- Sección del contador regresivo -->
     <section id="countdown-section">
       <h1>Tiempo Restante</h1>
       <div id="final-message" class="hidden">¡El Tiempo ha Llegado!</div>
@@ -48,11 +54,10 @@
       </div>
     </section>
 
-    <!-- Nueva sección para la playlist de YouTube Music -->
     <section id="playlist-section">
       <h2>Playlist Musical</h2>
       <div class="playlist-container">
-        <iframe src="https://www.youtube.com/watch?v=m7uiaakuLpQ&list=PLDbeoZ57LM7uaUlAboUhaAgtGSbR5FQmS" 
+        <iframe src="https://www.youtube.com/embed/videoseries?list=PLDbeoZ57LM7uaUlAboUhaAgtGSbR5FQmS" 
                 title="YouTube Music Playlist" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -62,8 +67,6 @@
     </section>
   </div>
 
-  <!-- Añadido el script de Lovable -->
-  <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
   <script src="script.js"></script>
 </body>
 </html>

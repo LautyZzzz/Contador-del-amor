@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poema 2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <nav class="navigation">
+    <a href="../index.html" class="nav-link">Inicio</a>
+    <a href="poema1.html" class="nav-link">Poema 1</a>
+    <a href="poema2.html" class="nav-link active">Poema 2</a>
+    <a href="poema3.html" class="nav-link">Poema 3</a>
+    <a href="poema4.html" class="nav-link">Poema 4</a>
+    <a href="../dedicatorias.html" class="nav-link">Dedicatorias</a>
+  </nav>
+
+  <div class="container poem-container">
+    <h1>Mi Segundo Poema</h1>
+    <div class="poem-content" contenteditable="true">
+      Escribe aquí tu poema...
+    </div>
+    <button class="save-button" onclick="savePoem(2)">Guardar Poema</button>
+  </div>
+
+  <script src="../poems.js"></script>
+</body>
+</html>
